@@ -22,7 +22,7 @@ public class DynaDropRController {
 	@Autowired
 	private StateService stateService;
 	
-	@GetMapping("/")
+	@GetMapping
 	public String showPage(Model model) {
 		model.addAttribute("countryList", countryService.getAllCountries());
 		return "Register";
