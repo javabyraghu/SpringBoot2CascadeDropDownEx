@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script th:src="@{/js/dynaRDrop.js}"></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h3>SPRING BOOT CASCADING DROPDOWN</h3>
+				<h4>(Mr.RAGHU NARESH-IT,HYD-INDIA)</h4>
+			</div>
+			<div class="card-body">
+				<form>
+				
+					<div class="row">
+						<div class="col-2">Country</div>
+						<div class="col-8">
+							<select id="countries" class="form-control">
+								<option value='-1'>SELECT</option>
+								<option th:each="ob:${countryList}" th:value="${ob[0]}"
+									th:text="${ob[1]}" /></option>
+							</select>
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-2">State</div>
+						<div class="col-8">
+							<select id="states" class="form-control">
+								<option value='-1'>SELECT</option>
+							</select>
+						</div>
+					</div>
+					<br/>
+					<div class="row">
+						<div class="col-2">City</div>
+						<div class="col-8">
+							<select id="cities" class="form-control">
+								<option value='-1'>SELECT</option>
+							</select>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript">
+		
+	</script>
+</body>
+</html>
